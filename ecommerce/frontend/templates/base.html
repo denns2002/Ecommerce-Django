@@ -28,10 +28,42 @@
         </div>
 
         <a href="#" class="cart-btn">
-            <span>cart</span>
+            <div class="pixel-border">
+                <object
+                    class="cart-svg" 
+                    width="40"
+                    type="image/svg+xml"
+                    data="{% static 'svg/cart.svg' %}">
+                    <img
+                        src="{% static 'svg/cart.svg' %}">
+                </object><br>
+                <span>cart</span>
+            </div>
         </a>
     </nav>
     {% block body %}
     {% endblock %}
+    <footer>
+        <div class="pokeball-block">
+            <div class="footer-pokeball">
+                <div class="pokeball-up">
+                    <img src="{% static 'img/pokeball-1-1.png' %}" alt="">
+                </div>
+                <div class="pokeball-down">
+                    <img src="{% static 'img/pokeball-1-2.png' %}" alt="">
+                </div>
+                <object
+                    class="social" 
+                    width="40"
+                    type="image/svg+xml"
+                    data="{% static 'svg/vk.svg' %}">
+                    <a href="vk.com">
+                        <img src="{% static 'svg/vk.svg' %}">
+                    </a>
+                </object>
+            </div>
+        </div>
+        <div class="footer-bg"></div>
+    </footer>
 </body>
 </html>

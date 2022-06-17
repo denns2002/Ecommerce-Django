@@ -1,5 +1,6 @@
 /* COLORS! */
 $white: #FBFCFC;
+$green: #2ECC71;
 
 
 
@@ -24,3 +25,14 @@ body {
     background: $white;
 }
 
+@keyframes pokeshow {
+    0% {
+        width: 0px;
+        margin: 40px 0 0 25px;
+    }
+
+    100% {
+        width: 50px;
+        margin: 15px 0 0 0px;
+    }
+}
