@@ -1,0 +1,26 @@
+/* COLORS! */
+$white: #FBFCFC;
+
+
+
+@font-face {
+    font-family: "PokemonXandY";
+    src: url(../fonts/PokemonXandY.ttf);
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+body {
+    background: $white;
+}
+

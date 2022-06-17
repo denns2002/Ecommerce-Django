@@ -1,0 +1,42 @@
+@import './all';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap');
+nav {
+    position: relative;
+    .logo {
+        display: flex;
+        width: 210px;
+        height: 105px;
+        img {
+            z-index: 5;
+            width: 200px;
+        }
+
+        .logo-text {
+            z-index: 4;
+            margin: 0 0 0 -10px;
+            display: block;
+            height: 105px;
+            color: #1B2631;
+            font-size: 80px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            text-shadow:-1px -1px 0px #85929E,
+                        -2px -1px 0px #AEB6BF,
+                        -3px -2px 0px #D6DBDF,
+                        -4px -2px 0px #EBEDEF;
+        }
+    }
+
+    .cart-btn {
+        display: block;
+        color: $white;
+        width: 100px;
+        height: 90px;
+        font-size: 20px;
+        font-family: "PokemonXandY";
+        text-transform: uppercase;
+        background: #2ECC71;
+        text-shadow:-.5px .5px 0 #D7DBDD,
+                    -1px 1px 0 #D7DBDD;
+    }
+}
