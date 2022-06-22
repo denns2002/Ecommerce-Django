@@ -1,6 +1,10 @@
 /* COLORS! */
 $white: #FBFCFC;
 $green: #2ECC71;
+$blue: #3498DB;
+$light: #fff;
+$gray: #1B2631;
+$red: rgb(215, 85, 74);
 
 
 
@@ -8,7 +12,7 @@ $green: #2ECC71;
     font-family: "PokemonXandY";
     src: url(../fonts/PokemonXandY.ttf);
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap');
 
 
 * {
@@ -26,13 +30,16 @@ body {
 }
 
 @keyframes pokeshow {
+
     0% {
-        width: 0px;
-        margin: 40px 0 0 25px;
+        filter: drop-shadow(0 0 10px $light);
     }
 
     100% {
-        width: 50px;
-        margin: 15px 0 0 0px;
+        filter: drop-shadow(0 0 1px $light);
     }
+}
+
+.grass {
+    background: #7c5;
 }

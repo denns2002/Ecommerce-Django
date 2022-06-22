@@ -1,9 +1,14 @@
 @import './all';
 @import './pixelborder';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap');
-nav {
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     position: relative;
-    padding: 15px 30px;
+    padding: 15px 10%;
+    height: 135px;
+    overflow: hidden;
+
 
     .logo {
         display: flex;
@@ -20,7 +25,7 @@ nav {
             margin: 0 0 0 -10px;
             display: block;
             height: 105px;
-            color: #1B2631;
+            color: $white;
             font-size: 80px;
             font-family: 'Roboto', sans-serif;
             font-weight: 900;
@@ -34,7 +39,6 @@ nav {
     .cart-btn {
         position: relative;
         display: block;
-        margin: 50px 0 0 50px;
         color: $white;
         width: 100px;
         height: 100px;
@@ -78,7 +82,7 @@ nav {
         }
 
         &:hover {
-            margin-top: 57px;
+            margin-top: 7px;
 
             .pixel-border::before{
                 top: 0;
@@ -87,26 +91,80 @@ nav {
     }
 }
 
+nav {
+    .nav-links {
+        font-family: "PokemonXandY";
+        text-transform: uppercase;
+        background: $gray;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        a {
+            overflow: hidden;
+            display: inline-block;
+            padding: 10px 40px;
+            color: white;
+            transition: all .2s;
+            position: relative;
+            letter-spacing: 2px;
+
+            &:hover {
+                background: $green;
+            }
+        }
+    }
+}
+
 footer {
+    font-family: "PokemonXandY";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     z-index: 0;
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100vw;
     height: 375px;
     background: url(../img/grasstexture.png);
 
+    .footer-text {
+        text-align: center;
+        color: $white;
+        text-transform: uppercase;
+        font-family: 100;
+        letter-spacing: 3px;
+        z-index: 2;
+        font-size: 20px;
+        text-shadow:-.5px -.5px .5px rgba(255,255,255,0.5),
+                    .5px .5px .5px rgba(255,255,255,0.5),
+                    .5px .5px .5px rgba(0,0,0,1);
+    }
+
     .pokeball-block {
-        width: 70%;
-        height: 200px;
-        margin: 50px 15% 0 15%;
+        width: 50%;
+        height: 120px;
+        margin: 65px 25% 20px 25%;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-around;
 
         .footer-pokeball {
+            position: relative;
             width: 50px;
-            height: 200px;
-            z-index: 2;
+            height: 120px;
+
+            a {
+                z-index: 7;
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            svg {
+                z-index: 6;
+            }
 
             img {
                 image-rendering: pixelated;
@@ -122,7 +180,7 @@ footer {
     
             .pokeball-down {
                 position: absolute;
-                margin-top: 24px;
+                margin-top: 23px;
                 z-index: 3;
                 transition: all 1s;
             }
@@ -131,8 +189,9 @@ footer {
                 width: 0px;
                 position: absolute;
                 z-index: 5;
-                margin: 40px 0 0 25px;
+                margin: 30px 0 0 25px;
                 transition: all .5s;
+                filter: drop-shadow(0 0 10px $light);
             }
 
             &:hover {
@@ -147,23 +206,101 @@ footer {
                 }
 
                 .social {
-                    animation: pokeshow 2s linear forwards normal;
-
-                    a {
-                        z-index: 6;
-                    }
+                    animation: pokeshow 1s linear;
+                    width: 40px;
+                    margin: 17px 0 0 5px;
+                    transition: all .5s;
+                    filter: drop-shadow(0 0 1px $light);
                 }
             }
         }
     }
 
+    .footer-nav {
+        position: relative;
+        margin: 0 25%;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        &::before {
+            pointer-events: none;
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            right: 0%;
+            width: 35%;
+            height: 0%;
+            border-bottom: 1px solid $white;
+            box-shadow: 0 0 2px $white;
+        }
+
+        &::after {
+            pointer-events: none;
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: 0%;
+            width: 35%;
+            height: 0%;
+            border-bottom: 1px solid $white;
+            box-shadow: 0 0 2px $white;
+        }
+
+        .footer-logo {
+            display: flex;
+            width: 210px;
+            height: 50px;
+    
+            img {
+                z-index: 5;
+                width: 100px;
+            }
+    
+            .logo-text {
+                z-index: 4;
+                margin: -3px 0 0 -6px;
+                display: block;
+                color: $white;
+                font-size: 40px;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            &:hover {
+                filter: drop-shadow(0 0 3px rgba(255, 255, 0, .3));
+            }
+        }
+
+        .footer-nav-el {
+            display: block;
+            margin-top: 20px;
+            color: $white;
+            text-transform: uppercase;
+            font-size: 15px;
+            letter-spacing: 3px;
+            text-shadow:-.5px -.5px .5px rgba(255,255,255,0.5),
+                        .5px .5px .5px rgba(255,255,255,0.5),
+                        .5px .5px .5px rgba(0,0,0,1);
+
+            &:hover {
+                color: yellow;
+            }
+        }
+    }
+
     .footer-bg {
-        z-index: 1;
+        z-index: -1;
         position: absolute;
         top: 0;
         width: 100%;
         height: 100%;
         background: rgb(251,252,252);
-        background: linear-gradient(180deg, rgba(23,32,42,1) 0%, rgba(23,32,42,.6) 50%, rgba(23,32,42,1) 100%);
+        background: linear-gradient(180deg, rgba(23,32,42,1) 0%, rgba(23,32,42,.4) 50%, rgba(23,32,42,1) 100%),
+                    linear-gradient(90deg, rgba(23,32,42,1) 0%, rgba(23,32,42,.4) 20%, rgba(23,32,42,.4) 80%, rgba(23,32,42,1) 100%);
     }
+}
+
+.bg-header {
+    background: green;
 }

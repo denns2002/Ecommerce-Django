@@ -1,10 +1,42 @@
 {% extends "base.html" %}
 {% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title>PokeStore</title>
+{% endblock %}
 {% block body %}
-    <style>
-        body {
-            width: 100wh;
-            height: 80vh;
-        }
-    </style>
+    <div class="filters">
+        <p>Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Impedit, soluta!</p>
+    </div>
+    <div id="catalog">
+    {% for product in products %}
+        <div class="card" align="center">
+            <div class="name">
+                <p class="number">{{ product.number|stringformat:"03d" }}</p>
+                <h1>{{ product.name }}</h1>
+            </div>
+            {% for picture in product.pictures.all %}
+                {% if picture != product.pictures.first %}
+                    <img src="/{{ picture.url }}">
+                {% endif %}
+            {% endfor %}
+            <p class="price">{{ product.price }}<span>&#36;</span></p>
+            <p class="manufacturer">{{ product.manufacturer }}</p>
+            <div class="btns">
+                <a href="#" class="view">check</a>
+                <a href="#" class="add">
+                    <object
+                        class="cart-svg" 
+                        width="25"
+                        type="image/svg+xml"
+                        data="{% static 'svg/cart.svg' %}">
+                        <img
+                            src="{% static 'svg/cart.svg' %}">
+                    </object>
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
 {% endblock %}

@@ -1,18 +1,23 @@
 {% extends "base.html" %}
-{% block body %}
 {% load static %}
-<body>
-    <img src="/{{ mini_picture.url }}">
-    <p>{{ product.number }}</p>
-    <h1>{{ product.name }}</h1>
-    {% for image in pictures.all %}
-        {% if image != pictures.all.first %}
-            <img src="/{{ image.url }}">
-        {% endif %}
-
-    {% endfor %}
-    <p>{{ product.price }}</p>
-    <p>{{ product.manufacturer }}</p>
-    <p>{{ product.description }}</p>
-</body>
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/details.css' %}">
+    <title>{{ product.number }} {{ product.name }}</title>
+{% endblock %}
+{% block body %}
+    <div class="card">
+        <body>
+            <img src="/{{ mini_picture.url }}">
+            <p>{{ product.number }}</p>
+            <h1>{{ product.name }}</h1>
+            {% for image in pictures.all %}
+                {% if image != pictures.all.first %}
+                    <img src="/{{ image.url }}">
+                {% endif %}
+            {% endfor %}
+            <p>{{ product.price }}</p>
+            <p>{{ product.manufacturer }}</p>
+            <p>{{ product.description }}</p>
+        </body>
+    </div>
 {% endblock %}

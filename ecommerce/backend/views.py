@@ -4,7 +4,11 @@ from .models.product import Products, Pictures
 
 
 def index(request):
+    products = Products.objects.all()
+    pictures = Pictures.objects.all()
     context = {
+        'products': products,
+        'pictures': pictures,
     }
 
     return render(request, 'index.html', context)

@@ -20,9 +20,8 @@ class Pictures(models.Model):
     class Meta:
         db_table = 'pictures'
         verbose_name_plural = 'Pictures'
-    product = models.ForeignKey(Products, on_delete=models.CASCADE)
+    product = models.ForeignKey(Products, on_delete=models.CASCADE, related_name='pictures')
     url = models.ImageField(upload_to='pictures/pokemons/')
-
 
 class PokemonTypes(models.Model):
     class Meta:

@@ -21,24 +21,28 @@ body {
 
 @-webkit-keyframes pokeshow {
   0% {
-    width: 0px;
-    margin: 40px 0 0 25px;
+    -webkit-filter: drop-shadow(0 0 10px #fff);
+            filter: drop-shadow(0 0 10px #fff);
   }
   100% {
-    width: 50px;
-    margin: 15px 0 0 0px;
+    -webkit-filter: drop-shadow(0 0 1px #fff);
+            filter: drop-shadow(0 0 1px #fff);
   }
 }
 
 @keyframes pokeshow {
   0% {
-    width: 0px;
-    margin: 40px 0 0 25px;
+    -webkit-filter: drop-shadow(0 0 10px #fff);
+            filter: drop-shadow(0 0 10px #fff);
   }
   100% {
-    width: 50px;
-    margin: 15px 0 0 0px;
+    -webkit-filter: drop-shadow(0 0 1px #fff);
+            filter: drop-shadow(0 0 1px #fff);
   }
+}
+
+.grass {
+  background: #7c5;
 }
 
 :root {
@@ -63,12 +67,24 @@ body {
           box-shadow: 0 calc(var(--pixel) * -3) 0 calc(var(--pixel) * -1) var(--pixel-border-4), 0 calc(var(--pixel) * 3) 0 calc(var(--pixel) * -1) var(--pixel-border-4), 0 calc(var(--pixel) * -6) 0 calc(var(--pixel) * -2) var(--pixel-border-4), 0 calc(var(--pixel) * 6) 0 calc(var(--pixel) * -2) var(--pixel-border-4), 0 calc(var(--pixel) * -9) 0 calc(var(--pixel) * -4) var(--pixel-border-4), 0 calc(var(--pixel) * 9) 0 calc(var(--pixel) * -4) var(--pixel-border-4), calc(var(--pixel) * -1) 0 0 0 var(--pixel-border), var(--pixel) 0 0 0 var(--pixel-border), 0 calc(var(--pixel) * -2) 0 0 var(--pixel-border-4), 0 calc(var(--pixel) * 2) 0 0 var(--pixel-border-4), 0 calc(var(--pixel) * -5) 0 calc(var(--pixel) * -1) var(--pixel-border-4), 0 calc(var(--pixel) * 5) 0 calc(var(--pixel) * -1) var(--pixel-border-4), 0 calc(var(--pixel) * -7) 0 calc(var(--pixel) * -2) var(--pixel-border-4), 0 calc(var(--pixel) * 7) 0 calc(var(--pixel) * -2) var(--pixel-border-4), 0 calc(var(--pixel) * -10) 0 calc(var(--pixel) * -4) var(--pixel-border-4), 0 calc(var(--pixel) * 10) 0 calc(var(--pixel) * -4) var(--pixel-border-4), calc(var(--pixel) * -2) 0 0 0 var(--pixel-border-4), calc(var(--pixel) * 2) 0 0 0 var(--pixel-border-4), 0 calc(var(--pixel) * -1) 0 var(--pixel) var(--pixel-border-4), 0 var(--pixel) 0 var(--pixel) var(--pixel-border-4), 0 calc(var(--pixel) * -4) 0 0 var(--pixel-border-4), 0 calc(var(--pixel) * 4) 0 0 var(--pixel-border-4), 0 calc(var(--pixel) * -6) 0 calc(var(--pixel) * -1) var(--pixel-border-4), 0 calc(var(--pixel) * 6) 0 calc(var(--pixel) * -1) var(--pixel-border-4), 0 calc(var(--pixel) * -8) 0 calc(var(--pixel) * -2) var(--pixel-border-4), 0 calc(var(--pixel) * 8) 0 calc(var(--pixel) * -2) var(--pixel-border-4), 0 calc(var(--pixel) * -11) 0 calc(var(--pixel) * -4) var(--pixel-border-4), 0 calc(var(--pixel) * 11) 0 calc(var(--pixel) * -4) var(--pixel-border-4), calc(var(--pixel) * -3) 0 0 0 var(--pixel-border-4), calc(var(--pixel) * 3) 0 0 0 var(--pixel-border-4), 0 0 0 calc(var(--pixel) * 2) var(--pixel-border-4), 0 calc(var(--pixel) * -3) 0 var(--pixel) var(--pixel-border-4), 0 calc(var(--pixel) * 3) 0 var(--pixel) var(--pixel-border-4), 0 calc(var(--pixel) * -5) 0 0 var(--pixel-border-4), 0 calc(var(--pixel) * 5) 0 0 var(--pixel-border-4), 0 calc(var(--pixel) * -7) 0 calc(var(--pixel) * -1) var(--pixel-border-4), 0 calc(var(--pixel) * 7) 0 calc(var(--pixel) * -1) var(--pixel-border-4), 0 calc(var(--pixel) * -9) 0 calc(var(--pixel) * -2) var(--pixel-border-4), 0 calc(var(--pixel) * 9) 0 calc(var(--pixel) * -2) var(--pixel-border-4), 0 calc(var(--pixel) * -12) 0 calc(var(--pixel) * -4) var(--pixel-border-4), 0 calc(var(--pixel) * 12) 0 calc(var(--pixel) * -4) var(--pixel-border-4), calc(var(--pixel) * -4) 0 0 0 var(--pixel-outline), calc(var(--pixel) * 4) 0 0 0 var(--pixel-outline), 0 calc(var(--pixel) * 0) 0 calc(var(--pixel) * 3) var(--pixel-outline), 0 calc(var(--pixel) * 0) 0 calc(var(--pixel) * 3) var(--pixel-outline), 0 calc(var(--pixel) * 2) 0 calc(var(--pixel) * 2) var(--pixel-outline), 0 calc(var(--pixel) * -2) 0 calc(var(--pixel) * 2) var(--pixel-outline), 0 calc(var(--pixel) * -4) 0 var(--pixel) var(--pixel-outline), 0 calc(var(--pixel) * 4) 0 var(--pixel) var(--pixel-outline), 0 calc(var(--pixel) * -6) 0 0 var(--pixel-outline), 0 calc(var(--pixel) * 6) 0 0 var(--pixel-outline), 0 calc(var(--pixel) * -8) 0 calc(var(--pixel) * -1) var(--pixel-outline), 0 calc(var(--pixel) * 8) 0 calc(var(--pixel) * -1) var(--pixel-outline), 0 calc(var(--pixel) * -10) 0 calc(var(--pixel) * -2) var(--pixel-outline), 0 calc(var(--pixel) * 10) 0 calc(var(--pixel) * -2) var(--pixel-outline), 0 calc(var(--pixel) * -13) 0 calc(var(--pixel) * -4) var(--pixel-outline), 0 calc(var(--pixel) * 13) 0 calc(var(--pixel) * -4) var(--pixel-outline);
 }
 
-nav {
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
-  padding: 15px 30px;
+  padding: 15px 10%;
+  height: 135px;
+  overflow: hidden;
 }
 
-nav .logo {
+header .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,27 +92,26 @@ nav .logo {
   height: 105px;
 }
 
-nav .logo img {
+header .logo img {
   z-index: 5;
   width: 200px;
 }
 
-nav .logo .logo-text {
+header .logo .logo-text {
   z-index: 4;
   margin: 0 0 0 -10px;
   display: block;
   height: 105px;
-  color: #1B2631;
+  color: #FBFCFC;
   font-size: 80px;
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
   text-shadow: -1px -1px 0px #85929E, -2px -1px 0px #AEB6BF, -3px -2px 0px #D6DBDF, -4px -2px 0px #EBEDEF;
 }
 
-nav .cart-btn {
+header .cart-btn {
   position: relative;
   display: block;
-  margin: 50px 0 0 50px;
   color: #FBFCFC;
   width: 100px;
   height: 100px;
@@ -111,7 +126,7 @@ nav .cart-btn {
   transition: all .5s;
 }
 
-nav .cart-btn .pixel-border {
+header .cart-btn .pixel-border {
   position: absolute;
   top: 16px;
   left: 6px;
@@ -119,19 +134,19 @@ nav .cart-btn .pixel-border {
   height: 68px;
 }
 
-nav .cart-btn .pixel-border .cart-svg {
+header .cart-btn .pixel-border .cart-svg {
   margin: -5px 0 0 20px;
   -webkit-filter: drop-shadow(-1px 1px 0 #D7DBDD);
           filter: drop-shadow(-1px 1px 0 #D7DBDD);
 }
 
-nav .cart-btn .pixel-border span {
+header .cart-btn .pixel-border span {
   margin: -5px 0 0 28px;
   width: 100%;
   text-align: center;
 }
 
-nav .cart-btn .pixel-border::before {
+header .cart-btn .pixel-border::before {
   z-index: -1;
   top: 7px;
   position: absolute;
@@ -143,27 +158,18 @@ nav .cart-btn .pixel-border::before {
   transition: all .5s;
 }
 
-nav .cart-btn:hover {
-  margin-top: 57px;
+header .cart-btn:hover {
+  margin-top: 7px;
 }
 
-nav .cart-btn:hover .pixel-border::before {
+header .cart-btn:hover .pixel-border::before {
   top: 0;
 }
 
-footer {
-  z-index: 0;
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
-  height: 375px;
-  background: url(../img/grasstexture.png);
-}
-
-footer .pokeball-block {
-  width: 70%;
-  height: 200px;
-  margin: 50px 15% 0 15%;
+nav .nav-links {
+  font-family: "PokemonXandY";
+  text-transform: uppercase;
+  background: #1B2631;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,10 +182,83 @@ footer .pokeball-block {
           justify-content: center;
 }
 
-footer .pokeball-block .footer-pokeball {
-  width: 50px;
-  height: 200px;
+nav .nav-links a {
+  overflow: hidden;
+  display: inline-block;
+  padding: 10px 40px;
+  color: white;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  position: relative;
+  letter-spacing: 2px;
+}
+
+nav .nav-links a:hover {
+  background: #2ECC71;
+}
+
+footer {
+  font-family: "PokemonXandY";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 0;
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+  height: 375px;
+  background: url(../img/grasstexture.png);
+}
+
+footer .footer-text {
+  text-align: center;
+  color: #FBFCFC;
+  text-transform: uppercase;
+  font-family: 100;
+  letter-spacing: 3px;
   z-index: 2;
+  font-size: 20px;
+  text-shadow: -0.5px -0.5px 0.5px rgba(255, 255, 255, 0.5), 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0.5px 0.5px 0.5px black;
+}
+
+footer .pokeball-block {
+  width: 50%;
+  height: 120px;
+  margin: 65px 25% 20px 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .pokeball-block .footer-pokeball {
+  position: relative;
+  width: 50px;
+  height: 120px;
+}
+
+footer .pokeball-block .footer-pokeball a {
+  z-index: 7;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+footer .pokeball-block .footer-pokeball svg {
+  z-index: 6;
 }
 
 footer .pokeball-block .footer-pokeball img {
@@ -201,7 +280,7 @@ footer .pokeball-block .footer-pokeball .pokeball-up {
 
 footer .pokeball-block .footer-pokeball .pokeball-down {
   position: absolute;
-  margin-top: 24px;
+  margin-top: 23px;
   z-index: 3;
   -webkit-transition: all 1s;
   transition: all 1s;
@@ -211,9 +290,11 @@ footer .pokeball-block .footer-pokeball .social {
   width: 0px;
   position: absolute;
   z-index: 5;
-  margin: 40px 0 0 25px;
+  margin: 30px 0 0 25px;
   -webkit-transition: all .5s;
   transition: all .5s;
+  -webkit-filter: drop-shadow(0 0 10px #fff);
+          filter: drop-shadow(0 0 10px #fff);
 }
 
 footer .pokeball-block .footer-pokeball:hover {
@@ -229,21 +310,109 @@ footer .pokeball-block .footer-pokeball:hover .pokeball-down {
 }
 
 footer .pokeball-block .footer-pokeball:hover .social {
-  -webkit-animation: pokeshow 2s linear forwards normal;
-          animation: pokeshow 2s linear forwards normal;
+  -webkit-animation: pokeshow 1s linear;
+          animation: pokeshow 1s linear;
+  width: 40px;
+  margin: 17px 0 0 5px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  -webkit-filter: drop-shadow(0 0 1px #fff);
+          filter: drop-shadow(0 0 1px #fff);
 }
 
-footer .pokeball-block .footer-pokeball:hover .social a {
-  z-index: 6;
+footer .footer-nav {
+  position: relative;
+  margin: 0 25%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .footer-nav::before {
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  right: 0%;
+  width: 35%;
+  height: 0%;
+  border-bottom: 1px solid #FBFCFC;
+  -webkit-box-shadow: 0 0 2px #FBFCFC;
+          box-shadow: 0 0 2px #FBFCFC;
+}
+
+footer .footer-nav::after {
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: 0%;
+  width: 35%;
+  height: 0%;
+  border-bottom: 1px solid #FBFCFC;
+  -webkit-box-shadow: 0 0 2px #FBFCFC;
+          box-shadow: 0 0 2px #FBFCFC;
+}
+
+footer .footer-nav .footer-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 210px;
+  height: 50px;
+}
+
+footer .footer-nav .footer-logo img {
+  z-index: 5;
+  width: 100px;
+}
+
+footer .footer-nav .footer-logo .logo-text {
+  z-index: 4;
+  margin: -3px 0 0 -6px;
+  display: block;
+  color: #FBFCFC;
+  font-size: 40px;
+  font-family: 'Roboto', sans-serif;
+}
+
+footer .footer-nav .footer-logo:hover {
+  -webkit-filter: drop-shadow(0 0 3px rgba(255, 255, 0, 0.3));
+          filter: drop-shadow(0 0 3px rgba(255, 255, 0, 0.3));
+}
+
+footer .footer-nav .footer-nav-el {
+  display: block;
+  margin-top: 20px;
+  color: #FBFCFC;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-shadow: -0.5px -0.5px 0.5px rgba(255, 255, 255, 0.5), 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0.5px 0.5px 0.5px black;
+}
+
+footer .footer-nav .footer-nav-el:hover {
+  color: yellow;
 }
 
 footer .footer-bg {
-  z-index: 1;
+  z-index: -1;
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
   background: #fbfcfc;
-  background: -webkit-gradient(linear, left top, left bottom, from(#17202a), color-stop(50%, rgba(23, 32, 42, 0.6)), to(#17202a));
-  background: linear-gradient(180deg, #17202a 0%, rgba(23, 32, 42, 0.6) 50%, #17202a 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#17202a), color-stop(50%, rgba(23, 32, 42, 0.4)), to(#17202a)), -webkit-gradient(linear, left top, right top, from(#17202a), color-stop(20%, rgba(23, 32, 42, 0.4)), color-stop(80%, rgba(23, 32, 42, 0.4)), to(#17202a));
+  background: linear-gradient(180deg, #17202a 0%, rgba(23, 32, 42, 0.4) 50%, #17202a 100%), linear-gradient(90deg, #17202a 0%, rgba(23, 32, 42, 0.4) 20%, rgba(23, 32, 42, 0.4) 80%, #17202a 100%);
+}
+
+.bg-header {
+  background: green;
 }
