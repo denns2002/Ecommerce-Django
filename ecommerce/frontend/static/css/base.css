@@ -71,16 +71,12 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
-  padding: 15px 10%;
-  height: 135px;
+  padding: 40px 0 0 0;
+  height: 155px;
   overflow: hidden;
 }
 
@@ -88,25 +84,23 @@ header .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 210px;
-  height: 105px;
 }
 
 header .logo img {
   z-index: 5;
-  width: 200px;
+  width: 150px;
+  height: 85px;
 }
 
 header .logo .logo-text {
   z-index: 4;
-  margin: 0 0 0 -10px;
+  margin: -3px 0 0 -10px;
   display: block;
-  height: 105px;
   color: #FBFCFC;
-  font-size: 80px;
+  font-size: 65px;
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
-  text-shadow: -1px -1px 0px #85929E, -2px -1px 0px #AEB6BF, -3px -2px 0px #D6DBDF, -4px -2px 0px #EBEDEF;
+  text-shadow: 0px 0px 1px #EBEDEF, 0px 0px 2px #D6DBDF, 0px 0px 3px #AEB6BF, 0px 0px 4px #85929E;
 }
 
 header .cart-btn {
@@ -166,10 +160,24 @@ header .cart-btn:hover .pixel-border::before {
   top: 0;
 }
 
-nav .nav-links {
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  background: #3498DB;
+}
+
+nav #search, nav .nav-links, nav .acc-links {
   font-family: "PokemonXandY";
   text-transform: uppercase;
-  background: #1B2631;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -182,7 +190,7 @@ nav .nav-links {
           justify-content: center;
 }
 
-nav .nav-links a {
+nav #search a, nav .nav-links a, nav .acc-links a {
   overflow: hidden;
   display: inline-block;
   padding: 10px 40px;
@@ -193,8 +201,86 @@ nav .nav-links a {
   letter-spacing: 2px;
 }
 
-nav .nav-links a:hover {
-  background: #2ECC71;
+nav #search a::before, nav .nav-links a::before, nav .acc-links a::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 62%;
+  left: 50%;
+  border-bottom: 1px solid #FBFCFC;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+nav #search a:hover::before, nav .nav-links a:hover::before, nav .acc-links a:hover::before {
+  width: 58%;
+  left: 20%;
+}
+
+nav #search .social-links, nav .nav-links .social-links, nav .acc-links .social-links {
+  position: relative;
+  padding: 0 40px;
+}
+
+nav #search .social-links::before, nav .nav-links .social-links::before, nav .acc-links .social-links::before {
+  content: '';
+  position: absolute;
+  border-left: 1px solid #FBFCFC;
+  width: 100%;
+  top: 20%;
+  left: 10px;
+  height: 60%;
+}
+
+nav #search .social-links a, nav .nav-links .social-links a, nav .acc-links .social-links a {
+  width: 20px;
+  height: 30px;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+nav #search .social-links a object, nav .nav-links .social-links a object, nav .acc-links .social-links a object {
+  pointer-events: none;
+}
+
+nav #search .social-links a:hover::before, nav .nav-links .social-links a:hover::before, nav .acc-links .social-links a:hover::before {
+  width: 0%;
+}
+
+nav #search {
+  position: absolute;
+  left: 0;
+}
+
+nav #search .form {
+  margin-top: 7px;
+  margin-left: 10px;
+}
+
+nav #search .form .input {
+  width: 200px;
+  border-radius: 10px;
+  outline: none;
+  padding-left: 5px;
+}
+
+nav #search .btn {
+  margin-top: -7px;
+  color: #FBFCFC;
+}
+
+nav .acc-links {
+  position: absolute;
+  right: 0;
+}
+
+nav .acc-links a {
+  padding: 10px 10px;
+}
+
+nav .acc-links a:hover::before {
+  width: 76%;
+  left: 10%;
 }
 
 footer {
@@ -212,7 +298,7 @@ footer {
   z-index: 0;
   position: relative;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   height: 375px;
   background: url(../img/grasstexture.png);
 }
@@ -223,6 +309,8 @@ footer .footer-text {
   text-transform: uppercase;
   font-family: 100;
   letter-spacing: 3px;
+  width: 50%;
+  margin: 0 25%;
   z-index: 2;
   font-size: 20px;
   text-shadow: -0.5px -0.5px 0.5px rgba(255, 255, 255, 0.5), 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0.5px 0.5px 0.5px black;
@@ -414,5 +502,6 @@ footer .footer-bg {
 }
 
 .bg-header {
-  background: green;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1B2631), color-stop(75%, #3498DB));
+  background: linear-gradient(#1B2631, #3498DB 75%);
 }

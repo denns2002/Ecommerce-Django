@@ -28,7 +28,7 @@ class PokemonTypes(models.Model):
         db_table = 'pokemon_types'
         verbose_name_plural = 'Pokemon Types'
     type = models.ForeignKey(Types, on_delete=models.CASCADE)
-    product = models.ForeignKey(Products, on_delete=models.CASCADE)
+    product = models.ForeignKey(Products, on_delete=models.CASCADE, related_name='types')
 
 
 class PokemonWeaknesses(models.Model):
@@ -36,4 +36,4 @@ class PokemonWeaknesses(models.Model):
         db_table = 'pokemon_weaknesses'
         verbose_name_plural = 'Pokemon Weaknesses'
     type = models.ForeignKey(Types, on_delete=models.CASCADE)
-    product = models.ForeignKey(Products, on_delete=models.CASCADE)
+    product = models.ForeignKey(Products, on_delete=models.CASCADE, related_name='weaknesses')

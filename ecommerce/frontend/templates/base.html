@@ -16,34 +16,74 @@
 </head>
 <body>
     <div class="bg-header">
-        <header>
-            <div class="logo">
-                <img src="{% static 'img/poke.png' %}" alt="Poke">
+        <header align="center">
+            <a href="{% url 'index' %}" class="logo">
+                <img src="{% static 'img/pokewhite.png' %}" alt="Poke">
                 <div class="logo-text"><span>Store</span></div>
-            </div>
-    
-            <a href="#" class="cart-btn">
-                <div class="pixel-border">
-                    <object
-                        class="cart-svg" 
-                        width="40"
-                        type="image/svg+xml"
-                        data="{% static 'svg/cart.svg' %}">
-                        <img
-                            src="{% static 'svg/cart.svg' %}">
-                    </object><br>
-                    <span>cart</span>
-                </div>
             </a>
         </header>
         
         <nav>
+            <div id="search">
+                <form class="form" method="POST" action="{% url 'search' %}">
+                    {% csrf_token %}
+                    <input class="input" 
+                    type="search" placeholder="  Search pokemon"
+                    aria-label="Search" name="searched">
+                    <button class="btn"
+                    type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
             <div class="nav-links">
-                <a href="#">home</a>
-                <a href="#">catalog</a>
-                <a href="#">about</a>
+                <a href="{% url 'index' %}">catalog</a>
+                <a href="#">contacts</a>
                 <a href="#">cart</a>
-                <a href="#">account</a>
+                <div class="social-links">
+                    <a href="https://vk.com/death_astronaut" target="_blank">
+                        <object
+                            class="social" 
+                            width="20"
+                            height="20"
+                            type="image/svg+xml"
+                            data="{% static 'svg/vk.svg' %}">
+                                <img src="{% static 'svg/vk.svg' %}">
+                        </object>
+                    </a>
+                    <a href="https://t.me/denisisrafilov" target="_blank">
+                        <object
+                            class="social" 
+                            width="20"
+                            height="20"
+                            type="image/svg+xml"
+                            data="{% static 'svg/tg.svg' %}">
+                                <img src="{% static 'svg/tg.svg' %}">
+                        </object>
+                    </a>
+                    <a href="mailto: denis.israfilov2002@mail.ru" target="_blank">
+                        <object
+                            class="social" 
+                            width="20"
+                            height="20"
+                            type="image/svg+xml"
+                            data="{% static 'svg/mail.svg' %}">
+                                <img src="{% static 'svg/mail.svg' %}">
+                        </object>
+                    </a>
+                    <a href="https://github.com/denns2002" target="_blank">
+                        <object
+                            class="social" 
+                            width="20"
+                            height="20"
+                            type="image/svg+xml"
+                            data="{% static 'svg/git.svg' %}">
+                                <img src="{% static 'svg/git.svg' %}">
+                        </object>
+                    </a>
+                </div>
+            </div>
+            <div class="acc-links">
+                <a href="#">sign up</a>
+                <a href="#">sign in</a>
             </div>
         </nav>
     </div>
@@ -127,8 +167,8 @@
             </div>
         </div>
         <div class="footer-nav">
-            <a href="#" class="footer-nav-el">catalog</a>
-            <a href="#" class="footer-nav-el">about</a>
+            <a href="{% url 'index' %}" class="footer-nav-el">catalog</a>
+            <a href="#" class="footer-nav-el">contacts</a>
             <a href="#" class="footer-logo">
                 <img src="{% static 'img/pokewhite.png' %}" alt="Poke">
                 <div class="logo-text"><span>Store</span></div>

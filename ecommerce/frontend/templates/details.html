@@ -8,16 +8,29 @@
     <div class="card">
         <body>
             <img src="/{{ mini_picture.url }}">
-            <p>{{ product.number }}</p>
+            <p>{{ product.number|stringformat:"03d" }}</p>
             <h1>{{ product.name }}</h1>
             {% for image in pictures.all %}
                 {% if image != pictures.all.first %}
                     <img src="/{{ image.url }}">
                 {% endif %}
             {% endfor %}
-            <p>{{ product.price }}</p>
+            <p>{{ product.price }}<span>&#36;</span></p>
             <p>{{ product.manufacturer }}</p>
             <p>{{ product.description }}</p>
+            <span>Types:</span>
+            <div class="types">
+                {% for i in product.types.all %}
+                    <span class="type">{{ i.type }}</span>
+                {% endfor %}
+            </div>
+
+            <span>Weaknesses:</span>
+            <div class="types">
+                {% for i in product.weaknesses.all %}
+                    <span class="type">{{ i.type }}</span>
+                {% endfor %}
+            </div>
         </body>
     </div>
 {% endblock %}
